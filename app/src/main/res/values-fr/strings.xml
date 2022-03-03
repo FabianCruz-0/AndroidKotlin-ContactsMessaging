@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ThrowWarning</string>
+    <string name="title_active_login">ThrowWarning</string>
+    <string name="password">Mot de passe</string>
+    <string name="new_password">Nouveau mot de passe</string>
+    <string name="name">Nom</string>
+    <string name="email">Courriel</string>
+    <string name="current_password">Mot de passe actuel</string>
+    <string name="repeat_password">Répéter le mot de passe</string>
+    <string name="signup">S inscrire</string>
+    <string name="link_signup">S inscrire</string>
+    <string name="all">Toute</string>
+    <string name="user_email">Utilisateurpardéfaut@gmail.com</string>
+    <string name="user_name">Utilisateur par défaut </string>
+    <string name="delete_account">Supprimer le compte</string>
+    <string name="change_password">Changer le mot de passe</string>
+    <string name="continue_check_email">Continuer</string>
+    <string name="title_delete_account">Supprimer le compte</string>
+    <string name="delete">Supprimer</string>
+    <string name="BIENVENIDO">BIENVENUE</string>
+    <string name="CHAT">CHAT</string>
+    <string name="text_signup">Vous´n avez pas de compte?</string>
+    <string name="login">Login</string>
+    <string name="update_profile">Sauvez</string>
+    <string name="forget_password">Vous avez oublié votre mot de passe?</string>
+    <string name="title_check_email">Vérification du courrier électronique</string>
+    <string name="subtitle_check_email">Pour terminer votre inscription, veuillez vérifier votre adresse électronique et cliquer ensuite sur continuer.</string>
+    <string name="title_account_recovery">Récupération du compte</string>
+    <string name="subtitle_account_recovery">Saisissez votre adresse e-mail afin que nous puissions vous envoyer un e-mail contenant les étapes à suivre pour changer votre mot de passe.</string>
+    <string name="recovery_account">Envoyer</string>
+    <string name="subtitle_update_password">Pour des raisons de sécurité, pour modifier votre mot de passe, vous devez d´abord entrer votre mot de passe actuel.</string>
+    <string name="title_update_password">Change password</string>
+    <string name="subtitle_delete_account">"For security reasons to delete your account completely, you must enter your password. "</string>
+    <string name="Escribir">Écrire...</string>
+    <string name="Tipo_cuenta">Type de compte</string>
+    <string name="Cerrar_sesión">Déconnexion</string>
+    <string name="Cuidador">Aide-soignante</string>
+    <string name="Persona_cuidar">Personne à soigner</string>
+    <string name="Mensaje">Message</string>
+    <string name="fecha">Date</string>
+</resources>

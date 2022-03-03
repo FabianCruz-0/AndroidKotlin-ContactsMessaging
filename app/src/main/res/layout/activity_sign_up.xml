@@ -159,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Cuidador"
+                android:text="@string/Cuidador"
                 android:textColor="#FFFFFF"/>
 
             <RadioButton
@@ -167,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="Persona a cuidar"
+                android:text="@string/Persona_cuidar"
                 android:textColor="#FFFFFF"/>
         </RadioGroup>
 

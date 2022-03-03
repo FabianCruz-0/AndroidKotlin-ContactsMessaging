@@ -39,7 +39,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BIENVENIDO"
+            android:text="@string/BIENVENIDO"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="36sp"
@@ -50,7 +50,7 @@
             android:id="@+id/NameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre"
+            android:text="@string/name"
             android:textSize="24sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
@@ -59,7 +59,7 @@
             android:id="@+id/NivelTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo de cuenta"
+            android:text="@string/Tipo_cuenta"
             android:textSize="24sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
@@ -78,7 +78,7 @@
                 android:id="@+id/chatButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CHAT"
+                android:text="@string/CHAT"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
         </LinearLayout>
@@ -92,7 +92,7 @@
                 android:id="@+id/signOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cerrar Sesión"
+                android:text="@string/Cerrar_sesión"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
 

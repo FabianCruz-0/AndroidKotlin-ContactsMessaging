@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ThrowWarning</string>
+    <string name="title_active_login">ThrowWarning</string>
+    <string name="password">Password</string>
+    <string name="new_password">New password</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="current_password">Current password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="signup">Sign up</string>
+    <string name="link_signup">Sign up</string>
+    <string name="all">All</string>
+    <string name="user_email">userdefault@gmail.com</string>
+    <string name="user_name">User Default</string>
+    <string name="delete_account">Delete account</string>
+    <string name="change_password">Change password</string>
+    <string name="continue_check_email">Continue</string>
+    <string name="title_delete_account">Delete account</string>
+    <string name="delete">Delete</string>
+    <string name="BIENVENIDO">WELCOME</string>
+    <string name="CHAT">CHAT</string>
+    <string name="text_signup">Dont you have an account?</string>
+    <string name="login">Login</string>
+    <string name="update_profile">Save</string>
+    <string name="forget_password">forgot your password?</string>
+    <string name="title_check_email">E-mail verification</string>
+    <string name="subtitle_check_email">To complete your registration, please! verify your email address and then click continue.</string>
+    <string name="title_account_recovery">Account recovery</string>
+    <string name="subtitle_account_recovery">Enter your email address so we can send you an email with the steps to change your password.</string>
+    <string name="recovery_account">Send</string>
+    <string name="subtitle_update_password">For security reasons to change your password, you must first enter your current password.</string>
+    <string name="title_update_password">Change password</string>
+    <string name="subtitle_delete_account">"For security reasons to delete your account completely, you must enter your password. "</string>
+    <string name="Escribir">Write...</string>
+    <string name="Tipo_cuenta">Type of account</string>
+    <string name="Cerrar_sesión">Sign out</string>
+    <string name="Cuidador">Caregiver</string>
+    <string name="Persona_cuidar">Person to care</string>
+    <string name="Mensaje">Message</string>
+    <string name="fecha">Date</string>
+</resources>

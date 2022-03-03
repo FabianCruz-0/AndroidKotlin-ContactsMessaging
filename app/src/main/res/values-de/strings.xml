@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ThrowWarning</string>
+    <string name="title_active_login">ThrowWarning</string>
+    <string name="password">Passwort</string>
+    <string name="new_password">Neues Passwort</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="current_password">Aktuelles Passwort</string>
+    <string name="repeat_password">Passwort wiederholen</string>
+    <string name="signup">Anmelden</string>
+    <string name="link_signup">Anmelden</string>
+    <string name="all">Alle</string>
+    <string name="user_email">benutzerstandard@gmail.com</string>
+    <string name="user_name">Benutzer Standard</string>
+    <string name="delete_account">Konto löschen</string>
+    <string name="change_password">Passwort ändern</string>
+    <string name="continue_check_email">Weiter</string>
+    <string name="title_delete_account">Konto löschen</string>
+    <string name="delete">Löschen</string>
+    <string name="BIENVENIDO">WILLKOMMEN</string>
+    <string name="CHAT">CHAT</string>
+    <string name="text_signup">Sie haben kein Konto?</string>
+    <string name="login">Anmeldung</string>
+    <string name="update_profile">Speichern</string>
+    <string name="forget_password">Haben Sie Ihr Passwort vergessen?</string>
+    <string name="title_check_email">E-Mail-Verifizierung</string>
+    <string name="subtitle_check_email">Um Ihre Registrierung abzuschließen, bitte! Bestätigen Sie Ihre E-Mail-Adresse und klicken Sie dann auf Weiter.</string>
+    <string name="title_account_recovery">Konto-Wiederherstellung </string>
+    <string name="subtitle_account_recovery">Geben Sie Ihre E-Mail-Adresse ein, damit wir Ihnen eine E-Mail mit den Schritten zum Ändern Ihres Passworts senden können.</string>
+    <string name="recovery_account">Schicken</string>
+    <string name="subtitle_update_password">Um Ihr Passwort zu ändern, müssen Sie aus Sicherheitsgründen zunächst Ihr aktuelles Passwort eingeben.</string>
+    <string name="title_update_password">Passwort ändern</string>
+    <string name="subtitle_delete_account">Um Ihr Konto vollständig zu löschen, müssen Sie aus Sicherheitsgründen Ihr Passwort eingeben.</string>
+    <string name="Escribir">Schreiben...</string>
+    <string name="Tipo_cuenta">Art von Account</string>
+    <string name="Cerrar_sesión">Ausloggen</string>
+    <string name="Cuidador">Betreuer</string>
+    <string name="Persona_cuidar">Zu pflegende Person</string>
+    <string name="Mensaje">Nachricht </string>
+    <string name="fecha">Datum</string>
+</resources>

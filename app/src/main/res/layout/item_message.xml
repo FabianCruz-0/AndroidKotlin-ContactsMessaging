@@ -13,20 +13,20 @@
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Email">
+        tools:text="@string/email">
     </TextView>
     <TextView
         android:id="@+id/MensajeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Mensaje"
+        tools:text="@string/Mensaje"
         android:textColor="@color/black">
     </TextView>
     <TextView
         android:id="@+id/fechaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="fecha">
+        tools:text="@string/fecha">
     </TextView>
 
 </LinearLayout>
