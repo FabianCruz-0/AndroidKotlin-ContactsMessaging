@@ -11,6 +11,7 @@
     <string name="signup">S inscrire</string>
     <string name="link_signup">S inscrire</string>
     <string name="all">Toute</string>
+    <string name="receptor">Changer</string>
     <string name="user_email">Utilisateurpardéfaut@gmail.com</string>
     <string name="user_name">Utilisateur par défaut </string>
     <string name="delete_account">Supprimer le compte</string>
@@ -39,4 +40,5 @@
     <string name="Persona_cuidar">Personne à soigner</string>
     <string name="Mensaje">Message</string>
     <string name="fecha">Date</string>
+    <string name="str_button">Cambiar idioma</string>
 </resources>

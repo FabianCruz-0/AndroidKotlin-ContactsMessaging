@@ -36,12 +36,12 @@ class SignUpActivity : AppCompatActivity() {
             val mPassword = binding.passwordEditText.text.toString()
             val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
             val name = binding.nameEditText.text.toString()
-            var intNivelUser = binding.NivelRadioGroup.checkedRadioButtonId;
+            var intNivelUser = binding.NivelRadioGroup.checkedRadioButtonId
             var cuidador : Boolean = false;
 
             var radio = findViewById<RadioButton>(intNivelUser)
 
-            if(radio.text.toString()=="Cuidador")
+            if(getResources().getResourceEntryName(radio.getId()).equals("Cuidador"))
             {
                 cuidador = true;
             }
@@ -96,7 +96,8 @@ class SignUpActivity : AppCompatActivity() {
                         "Id" to this.db.collection("usuarios").document().id,
                         "Nombre" to name,
                       "Email" to email,
-                      "Cuidador" to cuidador
+                      "Cuidador" to cuidador,
+                        "Receptor" to ""
                     ))
                     val intent = Intent(this, CheckEmailActivity::class.java)
                     startActivity(intent)

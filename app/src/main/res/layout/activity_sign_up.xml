@@ -155,7 +155,7 @@
             android:layout_marginTop="10dp">
 
             <RadioButton
-                android:id="@+id/CuidadorRadioButton"
+                android:id="@+id/Cuidador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"

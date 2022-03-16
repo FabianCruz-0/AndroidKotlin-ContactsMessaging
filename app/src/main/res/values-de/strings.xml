@@ -11,6 +11,7 @@
     <string name="signup">Anmelden</string>
     <string name="link_signup">Anmelden</string>
     <string name="all">Alle</string>
+    <string name="receptor">Veränderung</string>
     <string name="user_email">benutzerstandard@gmail.com</string>
     <string name="user_name">Benutzer Standard</string>
     <string name="delete_account">Konto löschen</string>
@@ -39,4 +40,5 @@
     <string name="Persona_cuidar">Zu pflegende Person</string>
     <string name="Mensaje">Nachricht </string>
     <string name="fecha">Datum</string>
+    <string name="str_button">Cambiar idioma</string>
 </resources>

@@ -1,17 +1,21 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.RadioButton
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_sign_in.*
+
 
 class SignInActivity : AppCompatActivity() {
+
+    lateinit var myPreference: MyPreference
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySignInBinding
@@ -26,6 +30,7 @@ class SignInActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.signInAppCompatButton.setOnClickListener {
+
             val mEmail = binding.emailEditText.text.toString()
             val mPassword = binding.passwordEditText.text.toString()
 
@@ -37,8 +42,6 @@ class SignInActivity : AppCompatActivity() {
                     SignIn(mEmail, mPassword)
                 }
             }
-
-            SignIn(mEmail, mPassword)
         }
 
         binding.signUpTextView.setOnClickListener {
@@ -46,6 +49,16 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.welcomeText.setOnClickListener{
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
+
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        myPreference = MyPreference(newBase!!)
+        val lang = myPreference.getLoginCount()
+        super.attachBaseContext(MyContextWrapper.wrap(newBase, lang))
     }
 
     public override fun onStart() {
@@ -63,9 +76,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun SignIn (email : String , password : String) {
-        auth.signInWithEmailAndPassword(email, password)
-
-                .addOnCompleteListener(this) { task ->
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Log.d("TAG", "signInWithEmail:success")
                         reload(email)

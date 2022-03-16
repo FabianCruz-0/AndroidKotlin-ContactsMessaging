@@ -98,5 +98,11 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/ingresarbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIDEOLLAMADA" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,7 @@
     <string name="title_account_recovery">Recuperación de la cuenta</string>
     <string name="subtitle_account_recovery">Ingresa tu email para que se te pueda enviar un correo con los pasos para cambiar tu contraseña.</string>
     <string name="recovery_account">Enviar</string>
+    <string name="receptor">Cambiar</string>
     <string name="title_update_password">Cambio de contraseña</string>
     <string name="subtitle_update_password">Por motivos de seguridad para cambiar tu contraseña, primero debes ingresar tu contraseña actual.</string>
     <string name="title_delete_account">Eliminar cuenta</string>
@@ -38,4 +39,5 @@
     <string name="Persona_cuidar">Persona a cuidar</string>
     <string name="Mensaje">Mensaje</string>
     <string name="fecha">fecha</string>
+    <string name="str_button">Cambiar idioma</string>
 </resources>

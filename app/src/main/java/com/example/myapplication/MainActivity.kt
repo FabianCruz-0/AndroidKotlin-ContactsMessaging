@@ -24,14 +24,13 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         val email= auth.currentUser?.email
-        var cuidador = ""
         if (email != null) {
              db.collection("usuarios").document(email).get().addOnSuccessListener { document ->
                  var result = document.data
 
                  binding.NameTextView.text = result?.get("Nombre").toString()
 
-                 if(result?.get("Cuidador") =="true")
+                 if(result?.get("Cuidador").toString() =="true")
                  {binding.NivelTextView.text = "Cuidador"} else
                  {binding.NivelTextView.text = "Persona a cuidar"}
         }
@@ -41,7 +40,11 @@ class MainActivity : AppCompatActivity() {
             signOut()
         }
         binding.chatButton.setOnClickListener{
-            val intent = Intent(this, ChatActivity::class.java)
+            val intent = Intent(this, UsersActivity::class.java)
+            startActivity(intent)
+        }
+        binding.ingresarbtn.setOnClickListener {
+            val intent = Intent(this, MeetAct::class.java)
             startActivity(intent)
         }
     }

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".ChatActivity"></activity>
+        <activity
+            android:name=".MeetAct"
+            android:exported="false" />
+        <activity android:name=".UsersActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ChatActivity" />
         <activity android:name=".CheckEmailActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignUpActivity2" />

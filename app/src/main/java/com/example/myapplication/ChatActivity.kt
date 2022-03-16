@@ -1,6 +1,9 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.*
@@ -32,6 +35,7 @@ class ChatActivity : AppCompatActivity() {
 
         auth = Firebase.auth
         val email= auth.currentUser?.email
+        var receptorActual:String = intent.getStringExtra("email").toString()
 
         db.collection("chat").orderBy("Fecha").addSnapshotListener { result, e ->
             if (result != null) {
@@ -42,8 +46,12 @@ class ChatActivity : AppCompatActivity() {
                     var receptor = document.get("Receptor").toString()
                     var mensaje = document.get("Mensaje").toString()
                     var fechaMostrar = document.get("FechaMostrar").toString()
-                    var msj = Message(emisor, receptor, mensaje, fecha, fechaMostrar)
-                    mensajes.add(msj)
+
+                    if((emisor == email && receptor == receptorActual)||(emisor == receptorActual && receptor == email))
+                    {
+                        var msj = Message(emisor, receptor, mensaje, fecha, fechaMostrar)
+                        mensajes.add(msj)
+                    }
                 }
                 initRecycler()
             }
@@ -57,16 +65,44 @@ class ChatActivity : AppCompatActivity() {
                 val cal = Calendar.getInstance()
                 val timestamp = formatter.format(cal.time)
 
-                db.collection("chat").document().set(
-                    hashMapOf(
-                        "Fecha" to System.currentTimeMillis(),
-                        "Mensaje" to mensaje,
-                        "Emisor" to email,
-                        "FechaMostrar" to timestamp
+                if(mensaje == "")
+                {
+                    Toast.makeText(this,"ERROR: MENSAJE VACÍO", Toast.LENGTH_SHORT).show()
+                } else {
+                    db.collection("chat").document().set(
+                        hashMapOf(
+                            "Fecha" to System.currentTimeMillis(),
+                            "Mensaje" to mensaje,
+                            "Emisor" to email,
+                            "FechaMostrar" to timestamp,
+                            "Receptor" to receptorActual
+                        )
                     )
-                )
-                binding.MensajeEdiText.text.clear()
+                    binding.MensajeEdiText.text.clear()
+                }
             }
+    }
+
+    private fun getMensajes(email:String,receptorActual:String) {
+        db.collection("chat").orderBy("Fecha").get().addOnSuccessListener{ result ->
+            if (result != null) {
+                mensajes.clear()
+                for (document in result) {
+                    var emisor = document.get("Emisor").toString()
+                    var fecha = document.get("Fecha").toString()
+                    var receptor = document.get("Receptor").toString()
+                    var mensaje = document.get("Mensaje").toString()
+                    var fechaMostrar = document.get("FechaMostrar").toString()
+
+                    if((emisor == email && receptor == receptorActual)||(emisor == receptorActual && receptor == email))
+                    {
+                        var msj = Message(emisor, receptor, mensaje, fecha, fechaMostrar)
+                        mensajes.add(msj)
+                    }
+                }
+                initRecycler()
+            }
+        }
     }
 
     fun initRecycler(){
