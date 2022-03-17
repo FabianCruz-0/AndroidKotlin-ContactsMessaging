@@ -39,6 +39,9 @@ class UsersActivity : AppCompatActivity() {
             }
             initRecycler()
         }
+
+
+
     }
 
     fun initRecycler(){

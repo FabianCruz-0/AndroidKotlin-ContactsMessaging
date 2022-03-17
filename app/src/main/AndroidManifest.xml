@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".ResCallActivity"></activity>
+        <activity android:name=".CallingActivity" />
+        <activity android:name=".UsersVideocallActivity" />
         <activity
             android:name=".MeetAct"
             android:exported="false" />

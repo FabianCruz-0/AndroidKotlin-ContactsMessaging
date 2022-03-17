@@ -13,15 +13,16 @@ class MainActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
+    var initialSnap = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         title = "Pantalla Principal"
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
+
 
         val email= auth.currentUser?.email
         if (email != null) {
@@ -44,8 +45,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ingresarbtn.setOnClickListener {
-            val intent = Intent(this, MeetAct::class.java)
+            val intent = Intent(this, UsersVideocallActivity::class.java)
             startActivity(intent)
+        }
+
+        auth.currentUser?.email?.let {
+            db.collection("videollamadas").document(it).addSnapshotListener{ doc, e ->
+                if (doc != null) {
+                    if(initialSnap == true) {
+                        initialSnap = false
+                    }else {
+
+                        var room = doc.get("Room").toString()
+                        var emisor = doc.get("EmisorEmail").toString()
+
+                        val intent = Intent(this@MainActivity, ResCallActivity::class.java).apply {
+                            putExtra("emisor",emisor)
+                            putExtra("room",room)
+                        }
+                        startActivity(intent)
+                    }
+                }
+            }
         }
     }
 
