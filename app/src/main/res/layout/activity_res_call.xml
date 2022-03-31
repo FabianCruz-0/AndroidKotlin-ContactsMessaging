@@ -6,67 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".CallingActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/dise_o_sin_t_tulo__1_" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+
         <TextView
             android:id="@+id/callingTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Llamada entrante"
-            android:textSize="40dp"
-            android:textAlignment="center"
             android:layout_marginTop="70dp"
-            android:textColor="@color/black"
-            />
+            android:text="@string/Llamada_entrante"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
         <TextView
             android:id="@+id/callNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textSize="50dp"
-            android:textAlignment="center"
             android:layout_marginTop="100dp"
-            android:textColor="@color/black"
-            />
+            android:text="Nombre"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
         <TextView
             android:id="@+id/callEmailTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Email"
-            android:textSize="20dp"
             android:textAlignment="center"
-            />
+            android:textColor="#FFFCFC"
+            android:textSize="20dp"
+            tools:text="Email" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="200dp">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp">
-                <Button
-                    android:id="@+id/declineCallButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:text="Rechazar"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp">
+
                 <Button
                     android:id="@+id/acceptCallButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:text="Aceptar"/>
+                    android:layout_width="124dp"
+                    android:layout_height="106dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:foreground="@drawable/call"
+                    android:foregroundTint="#23EA0A"
+                    android:textSize="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="                                    " />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/declineCallButton"
+                android:layout_width="116dp"
+                android:layout_height="105dp"
+                android:backgroundTint="@android:color/transparent"
+                android:foreground="@drawable/end_call"
+                android:foregroundTint="#EA0000"
+                android:textSize="30dp" />
 
         </LinearLayout>
 

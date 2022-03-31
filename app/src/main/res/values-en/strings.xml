@@ -36,6 +36,9 @@
     <string name="Escribir">Write...</string>
     <string name="Tipo_cuenta">Type of account</string>
     <string name="Cerrar_sesión">Sign out</string>
+    <string name="video_llamada">Video Call</string>
+    <string name="Llamada_entrante">Incoming Call</string>
+    <string name="calling">Calling....</string>
     <string name="Cuidador">Caregiver</string>
     <string name="Persona_cuidar">Person to care</string>
     <string name="Mensaje">Message</string>

@@ -35,6 +35,10 @@
     <string name="Tipo_cuenta">Tipo de cuenta</string>
     <string name="CHAT">CHAT</string>
     <string name="Cerrar_sesión">Cerrar Sesión</string>
+    <string name="video_llamada">Video Llamada</string>
+    <string name="Llamada_entrante">Llamada entrante</string>
+    <string name="calling">Llamando....</string>
+
     <string name="Cuidador">Cuidador</string>
     <string name="Persona_cuidar">Persona a cuidar</string>
     <string name="Mensaje">Mensaje</string>
