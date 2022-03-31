@@ -1,9 +1,18 @@
 package com.example.myapplication
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.oAuthCredential
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.item_message.view.*
 
 class MessageAdapter(val mensajes:ArrayList<Message>):RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
@@ -25,9 +34,18 @@ class MessageAdapter(val mensajes:ArrayList<Message>):RecyclerView.Adapter<Messa
 
     fun render(mensaje:Message)
     {
+        var auth: FirebaseAuth
+        auth = Firebase.auth
+
         view.emailTextView.text = mensaje.emisor
         view.MensajeTextView.text = mensaje.mensaje
         view.fechaTextView.text = mensaje.fechaMostrar
+
+        if(mensaje.emisor != auth.currentUser?.email)
+        {
+            val colorDrawable = ColorDrawable(Color.parseColor("#C4761F"))
+            view.backgroundMsg.background = colorDrawable
+        }
     }
 
     }

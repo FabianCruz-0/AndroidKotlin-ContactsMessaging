@@ -9,13 +9,13 @@
     <string name="current_password">Current password</string>
     <string name="repeat_password">Repeat password</string>
     <string name="signup">Sign up</string>
-    <string name="link_signup">Sign up</string>
+    <string name="link_signup"><u>Sign up</u></string>
     <string name="all">All</string>
     <string name="receptor">Change</string>
     <string name="user_email">userdefault@gmail.com</string>
     <string name="user_name">User Default</string>
     <string name="delete_account">Delete account</string>
-    <string name="change_password">Change password</string>
+    <string name="change_password"><u>Change password</u></string>
     <string name="continue_check_email">Continue</string>
     <string name="title_delete_account">Delete account</string>
     <string name="delete">Delete</string>
@@ -24,7 +24,7 @@
     <string name="text_signup">Dont you have an account?</string>
     <string name="login">Login</string>
     <string name="update_profile">Save</string>
-    <string name="forget_password">forgot your password?</string>
+    <string name="forget_password"><u>forgot your password?</u></string>
     <string name="title_check_email">E-mail verification</string>
     <string name="subtitle_check_email">To complete your registration, please! verify your email address and then click continue.</string>
     <string name="title_account_recovery">Account recovery</string>
@@ -43,5 +43,5 @@
     <string name="Persona_cuidar">Person to care</string>
     <string name="Mensaje">Message</string>
     <string name="fecha">Date</string>
-    <string name="str_button">Cambiar idioma</string>
+    <string name="str_button"><u>Change password</u></string>
 </resources>

@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroundMsg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginStart="50dp"
     android:layout_marginEnd="50dp"
     android:orientation="vertical"
-    android:background="#AACCFF"
-    android:layout_marginBottom="30dp">
+    android:background="@drawable/message"
+    android:layout_marginBottom="30dp"
+    android:padding="10sp">
 
     <TextView
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/email">
+        tools:text="@string/email"
+        android:textColor="@color/white"
+        android:textStyle="italic">
     </TextView>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10sp"/>
     <TextView
         android:id="@+id/MensajeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@string/Mensaje"
-        android:textColor="@color/black">
+        android:textColor="@color/white">
     </TextView>
     <TextView
         android:id="@+id/fechaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/fecha">
+        tools:text="@string/fecha"
+        android:textColor="#ededed"
+        android:textSize="12sp">
     </TextView>
 
 </LinearLayout>

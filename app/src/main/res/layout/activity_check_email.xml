@@ -7,14 +7,20 @@
     tools:context=".CheckEmailActivity">
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sign_background"/>
+
+    <ImageView
         android:id="@+id/signOutImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_sign_out"
+        android:src="@drawable/icon_exit"
         android:layout_marginRight="20dp"
         tools:ignore="VectorDrawableCompat"
         android:contentDescription="@string/all" />
@@ -35,9 +41,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:gravity="center"
-            android:textColor="@color/black_500"
+            android:textColor="@color/white"
             android:text="@string/title_check_email"
-            android:textSize="24sp" />
+            android:textSize="24sp"/>
 
         <TextView
             android:id="@+id/textView4"
@@ -47,6 +53,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20sp"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="@string/subtitle_check_email" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -59,7 +66,8 @@
             android:layout_gravity="center"
             android:paddingRight="64dp"
             android:text="@string/continue_check_email"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

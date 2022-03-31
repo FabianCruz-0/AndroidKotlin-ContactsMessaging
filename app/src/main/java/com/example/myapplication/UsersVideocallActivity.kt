@@ -1,8 +1,12 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -26,7 +30,13 @@ class UsersVideocallActivity : AppCompatActivity() {
         setContentView(R.layout.activity_users)
 
 
-        title = "Usuarios para videollamada"
+        //Cambia el color de la barra del título y el texto del título
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#59656f"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+        actionBar?.setTitle(Html.fromHtml("<font color='#ffffff'>Videollamada</font>"));
+
         auth = Firebase.auth
 
         db.collection("usuarios").get().addOnSuccessListener { result ->

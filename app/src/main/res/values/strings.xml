@@ -10,14 +10,14 @@
     <string name="repeat_password">Confirma la contraseña</string>
     <string name="signup">Registrarse</string>
     <string name="text_signup">¿No tienes cuenta?</string>
-    <string name="link_signup">Registrarse</string>
+    <string name="link_signup"><u>Registrarse</u></string>
     <string name="all">TODO</string>
     <string name="user_email">usuariodefault@gmail.com</string>
     <string name="user_name">Usuario Default</string>
     <string name="update_profile">Guardar</string>
     <string name="delete_account">Eliminar cuenta</string>
-    <string name="change_password">Cambiar contraseña</string>
-    <string name="forget_password">¿olvidaste tu contraseña?</string>
+    <string name="change_password"><u>Cambiar contraseña</u></string>
+    <string name="forget_password"><u>¿olvidaste tu contraseña?</u></string>
     <string name="title_check_email">Verificacion de correo electronico</string>
     <string name="subtitle_check_email">Para completar su registro. ¡Por favor! verifica su correo y después de clic en continuar.</string>
     <string name="continue_check_email">Continuar</string>
@@ -33,9 +33,9 @@
     <string name="Escribir">Escribir...</string>
     <string name="BIENVENIDO">BIENVENIDO</string>
     <string name="Tipo_cuenta">Tipo de cuenta</string>
-    <string name="CHAT">CHAT</string>
-    <string name="Cerrar_sesión">Cerrar Sesión</string>
-    <string name="video_llamada">Video Llamada</string>
+    <string name="CHAT">📩 CHAT</string>
+    <string name="Cerrar_sesión">🚪 Cerrar Sesión</string>
+    <string name="video_llamada">🎥 Video Llamada</string>
     <string name="Llamada_entrante">Llamada entrante</string>
     <string name="calling">Llamando....</string>
 
@@ -43,5 +43,5 @@
     <string name="Persona_cuidar">Persona a cuidar</string>
     <string name="Mensaje">Mensaje</string>
     <string name="fecha">fecha</string>
-    <string name="str_button">Cambiar idioma</string>
+    <string name="str_button"><u>Cambiar idioma</u></string>
 </resources>

@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         tools:text="Nombre"
         android:textSize="25dp"
-        android:textColor="@color/black">
+        android:textColor="@color/white">
     </TextView>
     <TextView
         android:id="@+id/usr_emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         tools:text="Correo">
     </TextView>
 

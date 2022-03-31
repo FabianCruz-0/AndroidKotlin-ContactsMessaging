@@ -1,10 +1,14 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
+import android.text.Html
 import android.text.TextWatcher
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.*
@@ -32,7 +36,12 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Chat"
+        //Cambia el color de la barra del título y el texto del título
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#59656f"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+        actionBar?.setTitle(Html.fromHtml("<font color='#ffffff'>Chat</font>"));
 
         auth = Firebase.auth
         val email= auth.currentUser?.email

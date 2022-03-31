@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/background"/>
+        android:src="@drawable/sign_background"/>
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -104,7 +104,7 @@
             android:gravity="end"
             android:layout_marginRight="32dp"
             android:layout_marginLeft="24dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#ffffff"
             android:textStyle="italic"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -116,7 +116,8 @@
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
             android:text="@string/login"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <TextView
@@ -130,8 +131,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.842"
         android:textSize="20sp"
-        android:textColor="#ff1ad4bd"
-        android:textStyle="bold"/>
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"

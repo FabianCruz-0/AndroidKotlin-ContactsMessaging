@@ -11,9 +11,11 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/homebackground"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
         tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txt_title_meet"

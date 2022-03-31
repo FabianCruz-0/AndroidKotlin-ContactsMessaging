@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/homebackground"/>
+        android:src="@drawable/background"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,8 +53,10 @@
             android:text="@string/name"
             android:textSize="24sp"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textAlignment="center"/>
 
+        <!-- QUITADO, NIVELES DE USUARIO YA NO SE OCUPAN
         <TextView
             android:id="@+id/NivelTextView"
             android:layout_width="match_parent"
@@ -63,7 +65,7 @@
             android:textSize="24sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
-
+        -->
         <Space
             android:layout_width="match_parent"
             android:layout_height="150dp" />
@@ -74,13 +76,36 @@
             android:orientation="vertical"
             android:layout_marginBottom="50dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/chatButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/CHAT"
                 android:textStyle="bold"
-                android:textSize="25sp"/>
+                android:paddingLeft="20sp"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#9933ff"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:textSize="25sp"
+                android:textAlignment="viewStart"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ingresarbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/video_llamada"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:paddingLeft="20sp"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#9933ff"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:textAlignment="viewStart"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -88,21 +113,22 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/signOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Cerrar_sesión"
                 android:textStyle="bold"
+                android:paddingLeft="20sp"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#dd1010"
+                android:background="@android:drawable/dialog_holo_light_frame"
+
                 android:textSize="25sp"/>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/ingresarbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/video_llamada" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

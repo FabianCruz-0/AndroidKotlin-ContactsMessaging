@@ -3,8 +3,12 @@ package com.example.myapplication
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
+import androidx.appcompat.app.ActionBar
 import com.facebook.react.modules.core.PermissionListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -42,6 +46,14 @@ class ResCallActivity : AppCompatActivity(), JitsiMeetActivityInterface {
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //Cambia el color de la barra del título y el texto del título
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#59656f"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+        actionBar?.setTitle(Html.fromHtml("<font color='#ffffff'>Llamada entrante</font>"));
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_res_call)
 

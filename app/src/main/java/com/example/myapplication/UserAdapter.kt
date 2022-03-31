@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.item_message.view.*
 import kotlinx.android.synthetic.main.item_user.view.*
 
 class UserAdapter(val usuarios:ArrayList<User>):RecyclerView.Adapter<UserAdapter.UserHolder>(){
-
     private lateinit var mListener:onItemClickListener
 
     interface onItemClickListener{

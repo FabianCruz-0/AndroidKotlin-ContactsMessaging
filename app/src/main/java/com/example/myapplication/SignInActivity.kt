@@ -2,10 +2,14 @@ package com.example.myapplication
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.example.myapplication.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -23,7 +27,12 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        title = "Iniciar Sesión"
+        //Cambia el color de la barra del título y el texto del título
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#59656f"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+        actionBar?.setTitle(Html.fromHtml("<font color='#ffffff'>Iniciar Sesión</font>"));
 
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
