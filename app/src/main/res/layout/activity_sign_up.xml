@@ -107,6 +107,26 @@
             android:textStyle="italic"/>
 
         <EditText
+            android:id="@+id/telEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:autofillHints="@string/tel"
+            android:background="@drawable/ic_field"
+            android:drawableStart="@drawable/ic_telephone"
+            android:drawableLeft="@drawable/ic_telephone"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/tel"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="italic"/>
+
+        <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -148,6 +168,11 @@
             android:textColor="@color/white"
             android:textStyle="italic"/>
 
+
+        <!-- ESTO ES DE LOS NIVELES DE USUARIO.
+        YA NO ES NECESARIO, PERO NO DEBE SER
+        BORRADO EN DADO CASO DE NECESITARSE.
+
         <RadioGroup
             android:id="@+id/NivelRadioGroup"
             android:layout_width="match_parent"
@@ -170,6 +195,7 @@
                 android:text="@string/Persona_cuidar"
                 android:textColor="#FFFFFF"/>
         </RadioGroup>
+        -->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signUpButton"

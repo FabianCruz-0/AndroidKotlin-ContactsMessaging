@@ -19,6 +19,17 @@
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="107dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SelectUser"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="30sp"
+            android:textSize="20sp"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/usersRV"
             android:layout_width="match_parent"

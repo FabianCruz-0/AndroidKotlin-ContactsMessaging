@@ -45,6 +45,9 @@ class SignUpActivity : AppCompatActivity() {
             val mPassword = binding.passwordEditText.text.toString()
             val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
             val name = binding.nameEditText.text.toString()
+            val telNumber = binding.telEditText.text.toString().trim()
+
+            /*
             var intNivelUser = binding.NivelRadioGroup.checkedRadioButtonId
             var cuidador : Boolean = false;
 
@@ -54,24 +57,38 @@ class SignUpActivity : AppCompatActivity() {
             {
                 cuidador = true;
             }
+            */
 
-            val passwordRegex = Pattern.compile("^" +
-                     "(?=.*[-@#$%^&+=])" +  // Al menos 1 caracter especial
-                     ".{6,}" +              // Al menos 6 caracteres
-                    "$")
+            val passwordRegex = Pattern.compile(
+                "^" +
+                        "(?=.*[-@#$%^&+=_])" +  // Al menos 1 caracter especial
+                        ".{6,}" +              // Al menos 6 caracteres
+                        "$"
+            )
 
             if (mEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
-                Toast.makeText(baseContext, "Ingrese un Email valido.",
-                    Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    baseContext, "Ingrese un Email valido.",
+                    Toast.LENGTH_SHORT
+                ).show()
 
-            } else if(mPassword.isEmpty() || !passwordRegex.matcher(mPassword).matches()) {
-                Toast.makeText(baseContext, "La contraseña es debil.",
-                    Toast.LENGTH_SHORT).show()
+            } else if (mPassword.isEmpty() || !passwordRegex.matcher(mPassword).matches()) {
+                Toast.makeText(
+                    baseContext, "La contraseña es debil.",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else if (mPassword != mRepeatPassword) {
-                Toast.makeText(baseContext, "Confirma la contraseña.",
-                    Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    baseContext, "Confirma la contraseña.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else if (telNumber.length != 10) {
+                Toast.makeText(
+                    baseContext, "El número deben ser 10 dígitos (SIN LADA Y SIN ESPACIOS).",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
-                createAccount(mEmail, mPassword, cuidador, name)
+                createAccount(mEmail, mPassword, telNumber, name)
             }
 
         }
@@ -80,15 +97,13 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 
     public override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
-        if(currentUser != null){
-            if(currentUser.isEmailVerified) {
+        if (currentUser != null) {
+            if (currentUser.isEmailVerified) {
                 reload()
             } else {
                 val intent = Intent(this, CheckEmailActivity::class.java)
@@ -97,29 +112,33 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun createAccount(email : String, password : String, cuidador : Boolean, name : String) {
+    private fun createAccount(email: String, password: String, telNumber: String, name: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    db.collection("usuarios").document(email).set(hashMapOf(
-                        "Id" to this.db.collection("usuarios").document().id,
-                        "Nombre" to name,
-                      "Email" to email,
-                      "Cuidador" to cuidador,
-                        "Receptor" to ""
-                    ))
+                    db.collection("usuarios").document(email).set(
+                        hashMapOf(
+                            "Id" to this.db.collection("usuarios").document().id,
+                            "Nombre" to name,
+                            "Email" to email,
+                            "Numero" to telNumber,
+                            "Receptor" to ""
+                        )
+                    )
                     val intent = Intent(this, CheckEmailActivity::class.java)
                     startActivity(intent)
                 } else {
                     Log.w("TAG", "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 
     private fun reload() {
-        val intent = Intent (this, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         this.startActivity(intent)
     }
 }

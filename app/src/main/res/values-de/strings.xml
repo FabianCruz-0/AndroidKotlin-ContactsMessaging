@@ -6,6 +6,8 @@
     <string name="new_password">Neues Passwort</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
+    <string name="tel">Handynummer</string>
+    <string name="SelectUser">Wählen Sie einen Kontakt aus:</string>
     <string name="current_password">Aktuelles Passwort</string>
     <string name="repeat_password">Passwort wiederholen</string>
     <string name="signup">Anmelden</string>
@@ -20,7 +22,11 @@
     <string name="title_delete_account">Konto löschen</string>
     <string name="delete">Löschen</string>
     <string name="BIENVENIDO">WILLKOMMEN</string>
-    <string name="CHAT">CHAT</string>
+    <string name="CHAT">📩 CHATS</string>
+    <string name="Cerrar_sesión">🚪 Ausloggen</string>
+    <string name="video_llamada">🎥 Videoanruf</string>
+    <string name="Llamada_entrante">Eingehender Anruf</string>
+    <string name="calling">Berufung...</string>
     <string name="text_signup">Sie haben kein Konto?</string>
     <string name="login">Anmeldung</string>
     <string name="update_profile">Speichern</string>
@@ -35,7 +41,6 @@
     <string name="subtitle_delete_account">Um Ihr Konto vollständig zu löschen, müssen Sie aus Sicherheitsgründen Ihr Passwort eingeben.</string>
     <string name="Escribir">Schreiben...</string>
     <string name="Tipo_cuenta">Art von Account</string>
-    <string name="Cerrar_sesión">Ausloggen</string>
     <string name="Cuidador">Betreuer</string>
     <string name="Persona_cuidar">Zu pflegende Person</string>
     <string name="Mensaje">Nachricht </string>

@@ -15,7 +15,8 @@ import com.google.firebase.auth.ktx.oAuthCredential
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.item_message.view.*
 
-class MessageAdapter(val mensajes:ArrayList<Message>):RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
+class MessageAdapter(val mensajes: ArrayList<Message>) :
+    RecyclerView.Adapter<MessageAdapter.MessageHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageHolder {
         val layoutinflater = LayoutInflater.from(parent.context)
@@ -30,23 +31,20 @@ class MessageAdapter(val mensajes:ArrayList<Message>):RecyclerView.Adapter<Messa
         return mensajes.size
     }
 
-    class MessageHolder(val view: View):RecyclerView.ViewHolder(view){
+    class MessageHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
-    fun render(mensaje:Message)
-    {
-        var auth: FirebaseAuth
-        auth = Firebase.auth
+        fun render(mensaje: Message) {
+            var auth: FirebaseAuth
+            auth = Firebase.auth
 
-        view.emailTextView.text = mensaje.emisor
-        view.MensajeTextView.text = mensaje.mensaje
-        view.fechaTextView.text = mensaje.fechaMostrar
+            view.emailTextView.text = mensaje.emisor
+            view.MensajeTextView.text = mensaje.mensaje
+            view.fechaTextView.text = mensaje.fechaMostrar
 
-        if(mensaje.emisor != auth.currentUser?.email)
-        {
-            val colorDrawable = ColorDrawable(Color.parseColor("#C4761F"))
-            view.backgroundMsg.background = colorDrawable
+            if (mensaje.emisor != auth.currentUser?.email) {
+                val colorDrawable = ColorDrawable(Color.parseColor("#C4761F"))
+                view.backgroundMsg.background = colorDrawable
+            }
         }
-    }
-
     }
 }

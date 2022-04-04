@@ -6,6 +6,8 @@
     <string name="new_password">New password</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
+    <string name="tel">Cellphone number</string>
+    <string name="SelectUser">Select a contact:</string>
     <string name="current_password">Current password</string>
     <string name="repeat_password">Repeat password</string>
     <string name="signup">Sign up</string>
@@ -20,7 +22,11 @@
     <string name="title_delete_account">Delete account</string>
     <string name="delete">Delete</string>
     <string name="BIENVENIDO">WELCOME</string>
-    <string name="CHAT">CHAT</string>
+    <string name="CHAT">📩 CHATS</string>
+    <string name="Cerrar_sesión">🚪 Sign off</string>
+    <string name="video_llamada">🎥 Video call</string>
+    <string name="Llamada_entrante">Incoming Call</string>
+    <string name="calling">Calling....</string>
     <string name="text_signup">Dont you have an account?</string>
     <string name="login">Login</string>
     <string name="update_profile">Save</string>
@@ -35,10 +41,6 @@
     <string name="subtitle_delete_account">"For security reasons to delete your account completely, you must enter your password. "</string>
     <string name="Escribir">Write...</string>
     <string name="Tipo_cuenta">Type of account</string>
-    <string name="Cerrar_sesión">Sign out</string>
-    <string name="video_llamada">Video Call</string>
-    <string name="Llamada_entrante">Incoming Call</string>
-    <string name="calling">Calling....</string>
     <string name="Cuidador">Caregiver</string>
     <string name="Persona_cuidar">Person to care</string>
     <string name="Mensaje">Message</string>

@@ -6,6 +6,8 @@
     <string name="new_password">Nouveau mot de passe</string>
     <string name="name">Nom</string>
     <string name="email">Courriel</string>
+    <string name="tel">Numéro cellulaire</string>
+    <string name="SelectUser">Sélectionnez un contact:</string>
     <string name="current_password">Mot de passe actuel</string>
     <string name="repeat_password">Répéter le mot de passe</string>
     <string name="signup">S inscrire</string>
@@ -20,7 +22,11 @@
     <string name="title_delete_account">Supprimer le compte</string>
     <string name="delete">Supprimer</string>
     <string name="BIENVENIDO">BIENVENUE</string>
-    <string name="CHAT">CHAT</string>
+    <string name="CHAT">📩 CHATS</string>
+    <string name="Cerrar_sesión">🚪 Déconnexion</string>
+    <string name="video_llamada">🎥 Appel vidéo</string>
+    <string name="Llamada_entrante">appel entrant</string>
+    <string name="calling">appel....</string>
     <string name="text_signup">Vous´n avez pas de compte?</string>
     <string name="login">Login</string>
     <string name="update_profile">Sauvez</string>
@@ -35,7 +41,6 @@
     <string name="subtitle_delete_account">"For security reasons to delete your account completely, you must enter your password. "</string>
     <string name="Escribir">Écrire...</string>
     <string name="Tipo_cuenta">Type de compte</string>
-    <string name="Cerrar_sesión">Déconnexion</string>
     <string name="Cuidador">Aide-soignante</string>
     <string name="Persona_cuidar">Personne à soigner</string>
     <string name="Mensaje">Message</string>
